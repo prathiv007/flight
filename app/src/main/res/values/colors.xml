@@ -5,10 +5,14 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="colorSeance">#683076</color>
     <color name="colorRichBlue">#5c59ae</color>
-    <color name="colorwhite">#fff</color>
+    <color name="colorWhite">#fff</color>
     <color name="colorRoseBud">#f9a19f</color>
     <color name="colorCharcoal">#696969</color>
-    <color name="colorbackline">#d1e2e7</color>
-    <color name="colorname">#c5ced4</color>
-    <color name="colorblack">#fff</color>
+    <color name="colorBackline">#d1e2e7</color>
+    <color name="colorLinkWater">#c5ced4</color>
+    <color name="colorSnow">#fafafa</color>
+    <color name="colorBlack">#000</color>
+    <color name="colorPattensBlue">#E3E9ED</color>
+    <color name="colorToryBlue">#2B479D</color>
+    <color name="colorGoldenDream">#F8D12E</color>
 </resources>
