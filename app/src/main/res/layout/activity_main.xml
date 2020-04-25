@@ -15,20 +15,25 @@
         android:background="@drawable/bg_gradientcurve">
 <androidx.appcompat.widget.Toolbar
     android:layout_width="match_parent"
-    android:layout_height="30dp"
-    android:layout_marginTop="25dp">
+    android:layout_height="@dimen/dimens_30_dp"
+    android:layout_marginTop="@dimen/dimens_25_dp">
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/llcabtflight"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:weightSum="6"
-        android:layout_alignParentStart="true"
-       >
-        <androidx.appcompat.widget.AppCompatImageView
+        android:layout_alignParentStart="true">
+        <RelativeLayout
             android:layout_width="0dp"
-            android:layout_height="@dimen/dimens_25_dp"
-            android:layout_weight="1"
-            android:src="@drawable/ic_menu1"/>
+            android:layout_height="27dp"
+            android:layout_weight="1">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dimens_25_dp"
+                android:layout_height="@dimen/dimens_25_dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_menu1"/>
+        </RelativeLayout>
+
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="0dp"
             android:layout_weight="4"
@@ -37,19 +42,27 @@
             android:textSize="@dimen/dimens_17_sp"
             android:gravity="center"
             android:textColor="@color/colorWhite"/>
-        <androidx.appcompat.widget.AppCompatImageView
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="@dimen/dimens_25_dp"
-            android:layout_weight="1"
-            android:src="@drawable/ic_dot"/>
+            android:layout_weight="1">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dimens_25_dp"
+                android:layout_height="@dimen/dimens_25_dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_dot" />
+        </RelativeLayout>
+
+
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.appcompat.widget.Toolbar>
                 <RelativeLayout
             android:id="@+id/rltime"
-            android:layout_width="130dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/dimens130_dp"
+            android:layout_height="@dimen/dimens_50_dp"
             android:layout_centerInParent="true">
             <TextView
                 android:layout_width="wrap_content"
@@ -108,9 +121,10 @@
                 android:layout_weight="2"
                 android:layout_height="match_parent">
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/dimens_30_dp"
                     android:layout_alignParentEnd="true"
-                    android:layout_height="25dp"
+                    android:paddingEnd="3dp"
+                    android:layout_height="@dimen/dimens_25_dp"
                     android:src="@drawable/ic_cinema" />
             </RelativeLayout>
 
@@ -168,9 +182,8 @@
                             android:textColor="@color/colorBlack"/>
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight=".9"
-                            android:paddingTop="4dp"
+                            android:layout_height="22dp"
+                            android:paddingTop="6dp"
                             android:src="@drawable/ic_plane1"/>
                         <TextView
                             android:layout_width="match_parent"
@@ -183,7 +196,7 @@
                     </LinearLayout>
                     <TextView
                         android:layout_width="1dp"
-                        android:layout_height="60dp"
+                        android:layout_height="@dimen/dimens_60_dp"
                         android:layout_gravity="center_vertical"
                         android:background="@drawable/bg_colorline"/>
                     <TextView
@@ -220,7 +233,7 @@
                     </LinearLayout>
                     <TextView
                         android:layout_width="1dp"
-                        android:layout_height="60dp"
+                        android:layout_height="@dimen/dimens_60_dp"
                         android:layout_gravity="center_vertical"
                         android:background="@drawable/bg_colorline"/>
                     <TextView
@@ -290,8 +303,8 @@
                             android:layout_height="match_parent">
                             <androidx.appcompat.widget.AppCompatImageView
                                 android:id="@+id/imflight"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="@dimen/dimens_40_dp"
+                                android:layout_height="@dimen/dimens_40_dp"
                                 android:layout_centerInParent="true"
                                 android:src="@drawable/ic_airplane_flight"/>
                             <TextView
@@ -378,10 +391,9 @@
                                 android:layout_height="0dp">
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:layout_width="@dimen/dimens_25_dp"
-                                    android:layout_height="25dp"
+                                    android:layout_height="@dimen/dimens_25_dp"
                                     android:layout_centerInParent="true"
                                     android:layout_alignParentBottom="true"
-                                    android:paddingTop="0dp"
                                     android:src="@drawable/ic_europe"/>
                                 <androidx.appcompat.widget.AppCompatImageView
                                     android:layout_width="wrap_content"
@@ -480,19 +492,19 @@
                         android:orientation="vertical">
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="@dimen/dimens_25_dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="3"
+                            android:layout_height="@dimen/dimens_25_dp"
+                            android:layout_marginTop="25dp"
                             android:layout_gravity="center"
-                            android:paddingTop="20dp"
+                            android:foregroundGravity="bottom"
+                            android:paddingTop="0dp"
                             android:src="@drawable/ic_europe"/>
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="3dp"
                             android:text="@string/label_EK204"
                             android:gravity="center"
-                            android:paddingBottom="15dp"
-                            android:textColor="#000"
+                            android:textColor="@color/colorBlack"
                             android:textSize="14sp"/>
 
                     </androidx.appcompat.widget.LinearLayoutCompat>
