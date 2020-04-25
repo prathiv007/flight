@@ -12,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2.5"
-        android:clipToPadding="false"
         android:background="@drawable/toolbarr">
 <androidx.appcompat.widget.Toolbar
     android:layout_width="match_parent"
@@ -29,7 +28,6 @@
             android:layout_width="0dp"
             android:layout_height="@dimen/dimens_25_dp"
             android:layout_weight="1"
-            android:fitsSystemWindows="true"
             android:src="@drawable/ic_menu1"/>
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="0dp"
@@ -38,12 +36,11 @@
             android:text="@string/label_abt_next_flight"
             android:textSize="@dimen/dimens_17_sp"
             android:gravity="center"
-            android:textColor="#fff"/>
+            android:textColor="@color/colorwhite"/>
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="0dp"
             android:layout_height="@dimen/dimens_25_dp"
             android:layout_weight="1"
-            android:fitsSystemWindows="true"
             android:src="@drawable/ic_dot"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -53,7 +50,6 @@
             android:id="@+id/rltime"
             android:layout_width="130dp"
             android:layout_height="50dp"
-
             android:layout_centerInParent="true">
             <TextView
                 android:layout_width="wrap_content"
@@ -135,7 +131,7 @@
         android:layout_height="0dp"
         android:layout_weight="5"
         android:weightSum="6"
-        android:background="#fafafa"
+        android:background="@color/colorsnow"
         android:orientation="vertical">
         <RelativeLayout
             android:layout_width="match_parent"
@@ -150,7 +146,7 @@
                 app:cardElevation="5dp"
                 android:layout_marginStart="40dp"
                 android:layout_centerInParent="true"
-                app:cardBackgroundColor="#fff">
+                app:cardBackgroundColor="@color/colorwhite">
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -169,7 +165,7 @@
                             android:paddingTop="9dp"
                             android:text="@string/label_city_DXB"
                             android:gravity="center"
-                            android:textColor="#000"/>
+                            android:textColor="@color/colorblack"/>
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
@@ -183,7 +179,7 @@
                             android:text="@string/label_city_SFO"
                             android:gravity="center"
                             android:paddingBottom="2dp"
-                            android:textColor="#000"/>
+                            android:textColor="@color/colorblack"/>
                     </LinearLayout>
                     <TextView
                         android:layout_width="1dp"
@@ -205,7 +201,7 @@
                             android:paddingTop="9dp"
                             android:text="@string/label_depature_time"
                             android:gravity="center_vertical"
-                            android:textColor="#000"/>
+                            android:textColor="@color/colorblack"/>
                         <TextView
                             android:paddingTop="4dp"
                             android:layout_width="match_parent"
@@ -276,7 +272,7 @@
                 app:cardElevation="5dp"
                 android:layout_marginStart="40dp"
                 android:layout_centerInParent="true"
-                app:cardBackgroundColor="#fff">
+                app:cardBackgroundColor="@color/colorwhite">
 
 
                 <androidx.appcompat.widget.LinearLayoutCompat
@@ -302,7 +298,7 @@
                                 android:layout_below="@+id/imflight"
                                 android:layout_width="50dp"
                                 android:layout_height="2dp"
-                                android:background="#F9A19F"
+                                android:background="@color/colorRoseBud"
                                 android:layout_centerInParent="true"
                                 android:layout_marginTop="5dp"/>
                         </RelativeLayout>
@@ -336,7 +332,7 @@
                                 android:layout_weight=".9"
                                 android:text="@string/label_cost"
                                 android:textSize="@dimen/dimens_16_sp"
-                                android:textColor="#000" />
+                                android:textColor="@color/colorblack" />
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
@@ -409,7 +405,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="20dp"
                                         android:text="@string/label_12"
-                                        android:textColor="#000"
+                                        android:textColor="@color/colorblack"
                                         android:textSize="14sp"/>
                                     <TextView
                                         android:id="@+id/tvhrs1"
@@ -431,7 +427,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="20dp"
                                         android:text="@string/label_45"
-                                        android:textColor="#000"
+                                        android:textColor="@color/colorblack"
                                         android:textSize="14sp"/>
                                     <TextView
                                         android:id="@+id/tvmin1"
@@ -469,7 +465,7 @@
                 app:cardElevation="5dp"
                 android:layout_marginStart="40dp"
                 android:layout_centerInParent="true"
-                app:cardBackgroundColor="#fff">
+                app:cardBackgroundColor="@color/colorwhite">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
@@ -518,7 +514,7 @@
                                 android:layout_alignParentBottom="true"
                                 android:paddingTop="10dp"
                                 android:text="@string/label_DXB_SFD"
-                                android:textColor="#000"
+                                android:textColor="@color/colorblack"
                                 android:textSize="18sp" />
                         </RelativeLayout>
 
@@ -552,7 +548,7 @@
                                 android:paddingBottom="2dp"
                                 android:paddingStart="2dp"
                                 android:text="@string/label_time"
-                                android:textColor="#000"/>
+                                android:textColor="@color/colorblack"/>
 
                         </RelativeLayout>
                         <RelativeLayout
@@ -609,7 +605,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/label_economy_class"
-                        android:textColor="#000"
+                        android:textColor="@color/colorblack"
                         android:layout_marginTop="8dp"
                         android:layout_marginStart="25dp"
                         android:textSize="@dimen/dimens_16_sp"/>
@@ -724,7 +720,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/label_business_class"
-                        android:textColor="#000"
+                        android:textColor="@color/colorblack"
                         android:layout_marginTop="8dp"
                         android:layout_marginStart="25dp"
                         android:textSize="@dimen/dimens_16_sp"/>
