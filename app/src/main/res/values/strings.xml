@@ -4,13 +4,13 @@
     <string name="label_12">12</string>
     <string name="label_8">8</string>
     <string name="label_hrs">hrs</string>
-    <string name="label_mins">mins</string>
-    <string name="label_180seatsavailable">180 seats Available</string>
+    <string name="label_minutes">mins</string>
+    <string name="label_seats_available">180 seats Available</string>
     <string name="label_city_DXB">DXB</string>
     <string name="label_city_SFO">SFO</string>
-    <string name="label_depature_time">Depature Time</string>
+    <string name="label_departure_time">Departure Time</string>
     <string name="label_time_10">10:00</string>
-    <string name="label_thrusday">Thrusday</string>
+    <string name="label_thursday">Thursday</string>
     <string name="label_arrival_time">Arrival Time</string>
     <string name="label_time_22">22:00</string>
     <string name="label_friday">Friday</string>
@@ -27,12 +27,12 @@
     <string name="label_duration">Duration 22hrs 45mins</string>
     <string name="label_economy_class">Economy Class</string>
     <string name="label_first_amt">USD $6,500</string>
-    <string name="label_avarage_cost">USD $4,500</string>
+    <string name="label_average_cost">USD $4,500</string>
     <string name="label_first_class">First Class</string>
     <string name="label_Beautiful_moments">Beautiful Moments</string>
     <string name="label_business_class">Business Class</string>
     <string name="label_best_comfort">Best Comfort</string>
     <string name="label_business_amt">USD $9,500</string>
     <string name="label_45">45</string>
-    min<string name="label_min">min</string>
+    <string name="label_min">min</string>
 </resources>

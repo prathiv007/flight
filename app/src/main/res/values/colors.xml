@@ -8,12 +8,13 @@
     <color name="colorWhite">#fff</color>
     <color name="colorRoseBud">#f9a19f</color>
     <color name="colorCharcoal">#696969</color>
-    <color name="colorBackline">#d1e2e7</color>
+    <color name="colorPattensBlue_bg">#d1e2e7</color>
     <color name="colorLinkWater">#c5ced4</color>
     <color name="colorSnow">#fafafa</color>
     <color name="colorBlack">#000</color>
     <color name="colorPattensBlue">#E3E9ED</color>
     <color name="colorToryBlue">#2B479D</color>
     <color name="colorGoldenDream">#F8D12E</color>
-     <color name="colorHawkesBlue">#E1E2E7</color>
+    <color name="colorBlue">#E1E2E7</color>
+    <color name="colorMediumPurple">#8d81e2</color>
 </resources>
