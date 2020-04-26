@@ -4,771 +4,741 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:weightSum="11"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    tools:context=".MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2.5"
-        android:background="@drawable/bg_gradientcurve">
-<androidx.appcompat.widget.Toolbar
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/dimens_30_dp"
-    android:layout_marginTop="@dimen/dimens_25_dp">
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/llcabtflight"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="6"
-        android:layout_alignParentStart="true">
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="27dp"
-            android:layout_weight="1">
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="@dimen/dimens_25_dp"
-                android:layout_height="@dimen/dimens_25_dp"
-                android:layout_centerInParent="true"
-                android:src="@drawable/ic_menu1"/>
-        </RelativeLayout>
+        android:background="@drawable/bg_gradient_curve">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="0dp"
-            android:layout_weight="4"
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llC_flight"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/label_abt_next_flight"
-            android:textSize="@dimen/dimens_17_sp"
-            android:gravity="center"
-            android:textColor="@color/colorWhite"/>
-        <RelativeLayout
-            android:layout_width="0dp"
-            android:layout_height="@dimen/dimens_25_dp"
-            android:layout_weight="1">
+            android:layout_marginTop="@dimen/dimens_25_dp"
+            android:padding="5dp">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="@dimen/dimens_25_dp"
                 android:layout_height="@dimen/dimens_25_dp"
-                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_menu1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/label_abt_next_flight"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/dimens_17_sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dimens_25_dp"
+                android:layout_height="@dimen/dimens_25_dp"
+                android:layout_gravity="center"
                 android:src="@drawable/ic_dot" />
-        </RelativeLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
 
+        <RelativeLayout
+            android:layout_below="@+id/llC_flight"
+            android:id="@+id/rl_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-</androidx.appcompat.widget.Toolbar>
-                <RelativeLayout
-            android:id="@+id/rltime"
-            android:layout_width="@dimen/dimens130_dp"
-            android:layout_height="@dimen/dimens_50_dp"
-            android:layout_centerInParent="true">
             <TextView
+                android:id="@+id/tvLabel1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
                 android:text="@string/label_8"
-                android:gravity="bottom"
                 android:textColor="@color/colorWhite"
-                android:textSize="@dimen/dimens_30_sp"/>
+                android:textSize="@dimen/dimens_30_sp" />
+
             <TextView
-                android:id="@+id/tvhrs"
+                android:id="@+id/tv_hrs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="18dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:paddingBottom="5dp"
-                android:textColor="@color/colorWhite"
-                android:text="@string/label_hrs" />
+                android:layout_alignBottom="@+id/tvLabel1"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/label_hrs"
+                android:layout_toEndOf="@+id/tvLabel1"
+                android:textColor="@color/colorWhite" />
+
             <TextView
                 android:id="@+id/tv12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/label_12"
-                android:textSize="@dimen/dimens_30_sp"
-                android:gravity="end"
-                android:textColor="@color/colorWhite"
-                android:layout_toEndOf="@+id/tvhrs"
                 android:layout_marginStart="20dp"
-                android:layout_alignParentBottom="true" />
+                android:layout_toEndOf="@+id/tv_hrs"
+                android:text="@string/label_12"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/dimens_30_sp" />
+
             <TextView
-                android:id="@+id/tvmin"
+                android:id="@+id/tv_min"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorWhite"
+                android:layout_toEndOf="@+id/tv12"
+                android:layout_alignBottom="@+id/tv12"
+                android:layout_marginStart="1dp"
+                android:layout_marginBottom="8dp"
                 android:text="@string/label_min"
-                android:gravity="start"
-                android:paddingStart="2dp"
-                android:paddingEnd="0dp"
-                android:paddingBottom="5dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_toEndOf="@+id/tv12" />
-
+                android:textColor="@color/colorWhite" />
 
         </RelativeLayout>
+
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="5"
-            android:layout_below="@+id/rltime">
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_weight="2"
-                android:layout_height="match_parent">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="@dimen/dimens_30_dp"
-                    android:layout_alignParentEnd="true"
-                    android:paddingEnd="3dp"
-                    android:layout_height="@dimen/dimens_25_dp"
-                    android:src="@drawable/ic_cinema" />
-            </RelativeLayout>
+            android:layout_below="@+id/rl_time"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dimens_25_dp"
+                android:layout_height="@dimen/dimens_25_dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_cinema" />
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_weight="3"
-                android:layout_height="match_parent"
-                android:text="@string/label_180seatsavailable"
-                android:gravity="bottom"
-                android:paddingBottom="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@string/label_seats_available"
                 android:textColor="@color/colorWhite"
-                android:textSize="@dimen/dimens_14_sp"/>
+                android:textSize="@dimen/dimens_14_sp" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </RelativeLayout>
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="5"
-        android:weightSum="6"
         android:background="@color/colorSnow"
-        android:orientation="vertical">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_weight="2.1"
-            android:layout_height="0dp"
-            android:layout_marginTop="5dp">
+        android:orientation="vertical"
+        android:weightSum="6">
 
-            <androidx.cardview.widget.CardView
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.1"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardElevation="5dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
-                app:cardElevation="5dp"
-                android:layout_marginStart="40dp"
-                android:layout_centerInParent="true"
-                app:cardBackgroundColor="@color/colorWhite">
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="5"
-                    android:orientation="horizontal">
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_weight="1.4"
-                        android:layout_height="match_parent"
-                        android:weightSum="5"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1.8"
-                            android:paddingTop="9dp"
-                            android:text="@string/label_city_DXB"
-                            android:gravity="center"
-                            android:textColor="@color/colorBlack"/>
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="22dp"
-                            android:paddingTop="6dp"
-                            android:src="@drawable/ic_plane1"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1.8"
-                            android:text="@string/label_city_SFO"
-                            android:gravity="center"
-                            android:paddingBottom="2dp"
-                            android:textColor="@color/colorBlack"/>
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="1dp"
-                        android:layout_height="@dimen/dimens_60_dp"
-                        android:layout_gravity="center_vertical"
-                        android:background="@drawable/bg_colorline"/>
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight=".3"
-                        android:layout_height="match_parent"/>
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_weight="1.55"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:paddingTop="9dp"
-                            android:text="@string/label_depature_time"
-                            android:gravity="center_vertical"
-                            android:textColor="@color/colorBlack"/>
-                        <TextView
-                            android:paddingTop="4dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/label_time_10"
-                            android:gravity="center_vertical"
-                            android:textColor="@color/colorLinkWater"/>
-                        <TextView
-                            android:paddingTop="3dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/label_thrusday"
-                            android:gravity="center_vertical"
-                            android:paddingBottom="5dp"
-                            android:textColor="@color/colorLinkWater"/>
-                    </LinearLayout>
-                    <TextView
-                        android:layout_width="1dp"
-                        android:layout_height="@dimen/dimens_60_dp"
-                        android:layout_gravity="center_vertical"
-                        android:background="@drawable/bg_colorline"/>
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_weight=".3"
-                        android:layout_height="match_parent"/>
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_weight="1.55"
-                        android:layout_height="match_parent"
-                        android:weightSum="5"
-                        android:orientation="vertical">
-                        <TextView
-                            android:paddingTop="9dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/label_arrival_time"
-                            android:gravity="center_vertical"
-                            android:textColor="#000" />
-                        <TextView
-                            android:paddingTop="4dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/label_time_22"
-                            android:gravity="center_vertical"
-                            android:textColor="@color/colorLinkWater"/>
-                        <TextView
-                            android:paddingTop="3dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/label_friday"
-                            android:gravity="center_vertical"
-                            android:paddingBottom="5dp"
-                            android:textColor="@color/colorLinkWater"/>
-                    </LinearLayout>
-                </androidx.appcompat.widget.LinearLayoutCompat>
-            </androidx.cardview.widget.CardView>
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_weight="2.1"
-            android:layout_height="0dp"
-            android:layout_marginTop="5dp">
+                android:orientation="horizontal"
+                android:weightSum="3">
 
-            <androidx.cardview.widget.CardView
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/label_city_DXB"
+                        android:textColor="@color/colorBlack" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/dimens_25_dp"
+                        android:layout_height="@dimen/dimens_25_dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_plane1" />
+
+                    <TextView
+                        android:layout_marginTop="0dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/label_city_SFO"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorBlue" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/label_departure_time"
+                        android:textColor="@color/colorBlack" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/label_time_10"
+                        android:textColor="@color/colorLinkWater" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/label_thursday"
+                        android:textColor="@color/colorLinkWater" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorBlue" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/label_arrival_time"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/label_time_22"
+                        android:textColor="@color/colorLinkWater" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/label_friday"
+                        android:textColor="@color/colorLinkWater" />
+                </LinearLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.1"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="0dp"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardElevation="5dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="0dp"
-                app:cardElevation="5dp"
-                android:layout_marginStart="40dp"
-                android:layout_centerInParent="true"
-                app:cardBackgroundColor="@color/colorWhite">
+                android:orientation="horizontal"
+                android:weightSum="3">
 
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/im_flight"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_airplane_flight" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_below="@id/im_flight"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="60dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/colorRoseBud" />
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorBlue" />
+                </RelativeLayout>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_weight="1"
+                    android:layout_marginStart="9dp"
+                    android:orientation="vertical"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:text="@string/label_from"
+                        android:textColor="@color/colorLinkWater"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/label_cost"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/dimens_16_sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".9"
+                        android:gravity="top"
+                        android:text="@string/label_passenger_no"
+                        android:textColor="@color/colorLinkWater"
+                        android:textSize="12sp" />
+
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:weightSum="5"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.1"
                         android:orientation="horizontal">
-                        <RelativeLayout
-                            android:layout_width="0dp"
-                            android:layout_weight="1.4"
-                            android:layout_height="match_parent">
-                            <androidx.appcompat.widget.AppCompatImageView
-                                android:id="@+id/imflight"
-                                android:layout_width="@dimen/dimens_40_dp"
-                                android:layout_height="@dimen/dimens_40_dp"
-                                android:layout_centerInParent="true"
-                                android:src="@drawable/ic_airplane_flight"/>
-                            <TextView
-                                android:layout_below="@+id/imflight"
-                                android:layout_width="50dp"
-                                android:layout_height="2dp"
-                                android:background="@color/colorRoseBud"
-                                android:layout_centerInParent="true"
-                                android:layout_marginTop="5dp"/>
-                        </RelativeLayout>
-                        <TextView
-                            android:layout_width="1dp"
-                            android:layout_height="70dp"
-                            android:layout_gravity="center"
-                            android:background="@drawable/bg_colorline"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="10dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="top"
+                            android:paddingTop="3dp"
+                            android:src="@drawable/ic_check_mark" />
+
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:layout_weight=".3"/>
-                        <androidx.appcompat.widget.LinearLayoutCompat
-                            android:layout_width="0dp"
-                            android:layout_weight="1.8"
-                            android:layout_height="match_parent"
-                            android:weightSum="4"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight=".9"
-                                android:text="@string/label_from"
-                                android:gravity="bottom"
-                                android:textSize="15sp"
-                                android:textColor="@color/colorLinkWater" />
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight=".9"
-                                android:text="@string/label_cost"
-                                android:textSize="@dimen/dimens_16_sp"
-                                android:textColor="@color/colorBlack" />
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="1"
-                                android:text="@string/label_passenger_no"
-                                android:textSize="12sp"
-                                android:textColor="@color/colorLinkWater"
-                                android:gravity="center_vertical" />
-                            <androidx.appcompat.widget.LinearLayoutCompat
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="1"
-                                android:weightSum="2"
-                                android:orientation="horizontal">
-                                <androidx.appcompat.widget.AppCompatImageView
-                                    android:layout_width="10dp"
-                                    android:layout_height="15dp"
-                                    android:layout_gravity="top"
-                                    android:paddingTop="3dp"
-                                    android:src="@drawable/ic_check_mark"/>
-                                <TextView
-                                    android:layout_weight="1.7"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:text="@string/label_average_price"
-                                    android:textSize="13sp"
-                                    android:gravity="top"
-                                    android:textColor="@color/colorRoseBud"
-                                    android:paddingBottom="0dp"/>
-                            </androidx.appcompat.widget.LinearLayoutCompat>
-
-                        </androidx.appcompat.widget.LinearLayoutCompat>
-
-                        <androidx.appcompat.widget.LinearLayoutCompat
-                            android:layout_width="0dp"
-                            android:layout_weight="1.5"
-                            android:layout_height="match_parent"
-                            android:weightSum="5"
-                            android:orientation="vertical">
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_weight="3"
-                                android:layout_height="0dp">
-                                <androidx.appcompat.widget.AppCompatImageView
-                                    android:layout_width="@dimen/dimens_25_dp"
-                                    android:layout_height="@dimen/dimens_25_dp"
-                                    android:layout_centerInParent="true"
-                                    android:layout_alignParentBottom="true"
-                                    android:src="@drawable/ic_europe"/>
-                                <androidx.appcompat.widget.AppCompatImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:src="@drawable/ic_expand"
-                                    android:layout_marginEnd="5dp"
-                                    android:layout_marginTop="5dp"
-                                    android:layout_alignParentEnd="true"/>
-                            </RelativeLayout>
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="0dp"
-                                android:layout_weight="2">
-                                <RelativeLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerInParent="true"
-                                    tools:ignore="UselessParent">
-                                    <androidx.appcompat.widget.AppCompatTextView
-                                        android:id="@+id/tv12hrs"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="20dp"
-                                        android:text="@string/label_12"
-                                        android:textColor="@color/colorBlack"
-                                        android:textSize="14sp"/>
-                                    <TextView
-                                        android:id="@+id/tvhrs1"
-                                        android:layout_toEndOf="@+id/tv12hrs"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="20dp"
-                                        android:text="@string/label_hrs"
-                                        android:gravity="bottom"
-                                        android:textColor="@color/colorLinkWater"
-                                        android:textSize="13sp"
-                                        android:paddingStart="1dp"
-                                        android:paddingEnd="0dp"
-                                        android:paddingBottom="1dp"/>
-                                    <TextView
-                                        android:id="@+id/tv8"
-                                        android:paddingStart="5dp"
-                                        android:paddingEnd="0dp"
-                                        android:layout_toEndOf="@+id/tvhrs1"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="20dp"
-                                        android:text="@string/label_45"
-                                        android:textColor="@color/colorBlack"
-                                        android:textSize="14sp"/>
-                                    <TextView
-                                        android:id="@+id/tvmin1"
-                                        android:layout_toEndOf="@+id/tv8"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="20dp"
-                                        android:text="@string/label_mins"
-                                        android:gravity="bottom"
-                                        android:paddingBottom="1dp"
-                                        android:paddingEnd="0dp"
-                                        android:paddingStart="1dp"
-                                        android:textColor="@color/colorLinkWater"
-                                        android:textSize="13sp"/>
-                                </RelativeLayout>
-
-                            </RelativeLayout>
-
-
-                        </androidx.appcompat.widget.LinearLayoutCompat>
+                            android:layout_weight="1.7"
+                            android:gravity="top"
+                            android:text="@string/label_average_price"
+                            android:textColor="@color/colorRoseBud"
+                            android:textSize="13sp" />
                     </androidx.appcompat.widget.LinearLayoutCompat>
+
                 </androidx.appcompat.widget.LinearLayoutCompat>
-
-            </androidx.cardview.widget.CardView>
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1.8">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="4dp"
-                android:layout_marginTop="0dp"
-                app:cardElevation="5dp"
-                android:layout_marginStart="40dp"
-                android:layout_centerInParent="true"
-                app:cardBackgroundColor="@color/colorWhite">
 
                 <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
                     android:weightSum="5">
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="0dp"
-                        android:layout_weight="1.3"
-                        android:layout_height="match_parent"
-                        android:weightSum="5"
-                        android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3">
+
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="@dimen/dimens_25_dp"
-                            android:layout_height="@dimen/dimens_25_dp"
-                            android:layout_marginTop="25dp"
-                            android:layout_gravity="center"
-                            android:foregroundGravity="bottom"
-                            android:paddingTop="0dp"
-                            android:src="@drawable/ic_europe"/>
-                        <TextView
-                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_europe" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:src="@drawable/ic_expand" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:layout_weight="2">
+
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv12hrs"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:paddingTop="3dp"
-                            android:text="@string/label_EK204"
-                            android:gravity="center"
+                            android:text="@string/label_12"
                             android:textColor="@color/colorBlack"
-                            android:textSize="14sp"/>
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="0dp"
-                        android:layout_weight="1.6"
-                        android:layout_height="match_parent"
-                        android:weightSum="5"
-                        android:orientation="vertical">
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="3">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_alignParentBottom="true"
-                                android:paddingTop="10dp"
-                                android:text="@string/label_DXB_SFD"
-                                android:textColor="@color/colorBlack"
-                                android:textSize="18sp" />
-                        </RelativeLayout>
+                            android:textSize="14sp" />
 
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="2"
-                            android:textSize="13sp"
-                            android:paddingTop="2dp"
-                            android:text="@string/label_A380_800"
-                            android:gravity="center_horizontal"
-                            android:textColor="@color/colorLinkWater"/>
+                            android:id="@+id/tv_hrs1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/tv12hrs"
+                            android:text="@string/label_hrs"
+                            android:layout_alignBottom="@+id/tv12hrs"
+                            android:textColor="@color/colorLinkWater"
+                            android:textSize="14sp" />
 
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="2.1"
-                        android:weightSum="5"
-                        android:orientation="vertical">
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="3">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignParentEnd="true"
-                                android:layout_alignParentBottom="true"
-                                android:paddingEnd="10dp"
-                                android:paddingBottom="2dp"
-                                android:paddingStart="2dp"
-                                android:text="@string/label_time"
-                                android:textColor="@color/colorBlack"/>
+                        <TextView
+                            android:id="@+id/tv8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/tv_hrs1"
+                            android:layout_alignBottom="@+id/tv_hrs1"
+                            android:layout_marginStart="5dp"
+                            android:text="@string/label_45"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="14sp" />
 
-                        </RelativeLayout>
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="2">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:paddingTop="0dp"
-                                android:paddingEnd="10dp"
-                                android:paddingStart="0dp"
+                        <TextView
+                            android:id="@+id/tv_min1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_toEndOf="@+id/tv8"
+                            android:text="@string/label_minutes"
+                            android:layout_alignBottom="@+id/tv8"
+                            android:textColor="@color/colorLinkWater"
+                            android:textSize="14sp" />
 
-                                android:layout_alignParentEnd="true"
-                                android:text="@string/label_duration"
-                                android:textColor="@color/colorLinkWater"/>
 
-                        </RelativeLayout>
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    </RelativeLayout>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
-            </androidx.cardview.widget.CardView>
-        </RelativeLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.8"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="4dp"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardElevation="5dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.3"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/dimens_25_dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_europe" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_EK204"
+                        android:textColor="#000"
+                        android:textSize="14sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.6"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_DXB_SFD"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_A380_800"
+                        android:paddingTop="2dp"
+                        android:textColor="@color/colorLinkWater"
+                        android:textSize="13sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_time"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:textColor="@color/colorBlack" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_duration"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="10dp"
+                        android:textColor="@color/colorLinkWater" />
+
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3.5"
-        android:weightSum="3"
-        android:orientation="vertical">
-        <RelativeLayout
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerInParent="true"
-               app:cardElevation="5dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="8dp">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <TextView
-                        android:layout_width="3dp"
-                        android:layout_height="match_parent"
-                        android:background="#8d81e2"/>
-                    <TextView
-                        android:id="@+id/tveclass"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/label_economy_class"
-                        android:textColor="@color/colorBlack"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginStart="25dp"
-                        android:textSize="@dimen/dimens_16_sp"/>
-                    <TextView
-                        android:id="@+id/tvap"
-                        android:layout_below="@id/tveclass"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/label_average_price"
-                        android:textColor="@color/colorRoseBud"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginStart="25dp"
-                        android:textSize="@dimen/dimens_12_sp"/>
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent">
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="8dp"
+            app:cardElevation="5dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerInParent="true"
-                            android:paddingStart="0dp"
-                            android:paddingEnd="15dp"
-                            android:text="@string/label_avarage_cost"
-                            android:textColor="@color/colorCharcoal"
-                            android:textStyle="bold" />
-                    </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorMediumPurple" />
 
-                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tv_economy_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/dimens_16_sp"
+                    android:text="@string/label_economy_class"/>
 
-            </androidx.cardview.widget.CardView>
-        </RelativeLayout>
-        <RelativeLayout
+                <TextView
+                    android:id="@+id/tv_average"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_economy_class"
+                    android:layout_alignStart="@+id/tv_economy_class"
+                    android:textColor="@color/colorRoseBud"
+                    android:textSize="@dimen/dimens_12_sp"
+                    android:text="@string/label_average_price"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="15dp"
+                    android:text="@string/label_average_cost"
+                    android:textColor="@color/colorCharcoal"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerInParent="true"
-                android:layout_marginStart="40dp"
-                app:cardElevation="5dp"
-                android:layout_marginTop="8dp">
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <TextView
-                        android:layout_width="3dp"
-                        android:layout_height="match_parent"
-                        android:background="#e39bc3"/>
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="8dp"
+            app:cardElevation="5dp">
 
-                    <TextView
-                        android:id="@+id/tvfclass"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/label_first_class"
-                        android:textColor="#000"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginStart="25dp"
-                        android:textSize="@dimen/dimens_16_sp"/>
-                    <TextView
-                        android:id="@+id/tvbm"
-                        android:layout_below="@id/tvfclass"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/label_Beautiful_moments"
-                        android:textColor="@color/colorRoseBud"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginStart="25dp"
-                        android:textSize="@dimen/dimens_12_sp"/>
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/label_first_amt"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerInParent="true"
-                            android:textColor="@color/colorCharcoal"
-                            android:paddingEnd="15dp"
-                            android:textStyle="bold"
-                            android:paddingStart="0dp"/>
-                    </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
 
-                </RelativeLayout>
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="#e39bc3" />
 
-            </androidx.cardview.widget.CardView>
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerInParent="true"
-                app:cardElevation="5dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="8dp">
+                <TextView
+                    android:id="@+id/tv_first_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/label_first_class"
+                    android:textColor="#000"
+                    android:textSize="@dimen/dimens_16_sp" />
+
+                <TextView
+                    android:id="@+id/tv_beautiful"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_first_class"
+                    android:layout_alignStart="@+id/tv_first_class"
+                    android:text="@string/label_Beautiful_moments"
+                    android:textColor="@color/colorRoseBud"
+                    android:textSize="@dimen/dimens_12_sp" />
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="3dp"
-                        android:layout_height="match_parent"
-                        android:background="#8d81e2"/>
-                    <TextView
-                        android:id="@+id/tvbcclass"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/label_business_class"
-                        android:textColor="@color/colorBlack"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginStart="25dp"
-                        android:textSize="@dimen/dimens_16_sp"/>
-                    <TextView
-                        android:id="@+id/tvbc"
-                        android:layout_below="@id/tvbcclass"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/label_best_comfort"
-                        android:textColor="@color/colorRoseBud"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginStart="25dp"
-                        android:textSize="@dimen/dimens_12_sp"/>
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/label_business_amt"
-                            android:layout_alignParentEnd="true"
-                            android:layout_centerInParent="true"
-                            android:textColor="@color/colorCharcoal"
-                            android:paddingEnd="15dp"
-                            android:textStyle="bold"
-                            android:paddingStart="0dp"/>
-                    </RelativeLayout>
+                    android:layout_height="match_parent">
 
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="15dp"
+                        android:text="@string/label_first_amt"
+                        android:textColor="@color/colorCharcoal"
+                        android:textStyle="bold" />
                 </RelativeLayout>
 
+            </RelativeLayout>
 
-            </androidx.cardview.widget.CardView>
-        </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="8dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorMediumPurple" />
+
+                <TextView
+                    android:id="@+id/tv_business_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/label_business_class"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/dimens_16_sp" />
+
+                <TextView
+                    android:id="@+id/tv_best"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_business_class"
+                    android:layout_alignStart="@+id/tv_business_class"
+                    android:text="@string/label_best_comfort"
+                    android:textColor="@color/colorRoseBud"
+                    android:textSize="@dimen/dimens_12_sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="15dp"
+                        android:text="@string/label_business_amt"
+                        android:textColor="@color/colorCharcoal"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
-
-
 
 </androidx.appcompat.widget.LinearLayoutCompat>
