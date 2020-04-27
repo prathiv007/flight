@@ -12,5 +12,9 @@
     <dimen name="dimens_50_dp">50dp</dimen>
     <dimen name="dimens_40_dp">40dp</dimen>
     <dimen name="dimens_60_dp">60dp</dimen>
+    <dimen name="dimens_20_dp">20dp</dimen>
+    <dimen name="dimens_15_dp">15dp</dimen>
+    <dimen name="dimens_10_dp">10dp</dimen>
+    <dimen name="dimens_35_dp">35dp</dimen>
 </resources>
 
