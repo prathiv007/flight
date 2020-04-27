@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimens_25_dp"
-            android:padding="5dp">
+            android:padding="@dimen/dimens_5_dp">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="@dimen/dimens_25_dp"
@@ -67,8 +67,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/tvLabel1"
-                android:layout_marginStart="1dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginStart="@dimen/dimens_1_dp"
+                android:layout_marginBottom="@dimen/dimens_8_dp"
                 android:text="@string/label_hrs"
                 android:layout_toEndOf="@+id/tvLabel1"
                 android:textColor="@color/colorWhite" />
@@ -90,8 +90,8 @@
                 android:layout_height="wrap_content"
                 android:layout_toEndOf="@+id/tv12"
                 android:layout_alignBottom="@+id/tv12"
-                android:layout_marginStart="1dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginStart="@dimen/dimens_1_dp"
+                android:layout_marginBottom="@dimen/dimens_8_dp"
                 android:text="@string/label_min"
                 android:textColor="@color/colorWhite" />
 
@@ -138,10 +138,10 @@
             android:layout_weight="2.1"
             android:layout_marginStart="@dimen/dimens_20_dp"
             android:layout_marginEnd="@dimen/dimens_20_dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="@dimen/dimens_5_dp"
             android:layout_marginTop="@dimen/dimens_15_dp"
             app:cardBackgroundColor="@color/colorWhite"
-            app:cardElevation="5dp">
+            app:cardElevation="@dimen/dimens_5_dp">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
@@ -184,7 +184,7 @@
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <View
-                    android:layout_width="1dp"
+                    android:layout_width="@dimen/dimens_1_dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/dimens_10_dp"
                     android:layout_marginBottom="@dimen/dimens_10_dp"
@@ -215,7 +215,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="@dimen/dimens_5_dp"
                         android:text="@string/label_time_10"
                         android:textColor="@color/colorLinkWater" />
 
@@ -224,13 +224,13 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="@dimen/dimens_5_dp"
                         android:text="@string/label_thursday"
                         android:textColor="@color/colorLinkWater" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <View
-                    android:layout_width="1dp"
+                    android:layout_width="@dimen/dimens_1_dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="@dimen/dimens_10_dp"
                     android:layout_marginBottom="@dimen/dimens_10_dp"
@@ -259,7 +259,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="@dimen/dimens_5_dp"
                         android:text="@string/label_time_22"
                         android:textColor="@color/colorLinkWater" />
 
@@ -268,7 +268,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:gravity="center_vertical"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="@dimen/dimens_5_dp"
                         android:text="@string/label_friday"
                         android:textColor="@color/colorLinkWater" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -284,7 +284,7 @@
             android:layout_marginEnd="@dimen/dimens_20_dp"
             android:layout_marginTop="0dp"
             app:cardBackgroundColor="@color/colorWhite"
-            app:cardElevation="5dp">
+            app:cardElevation="@dimen/dimens_5_dp">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
@@ -305,19 +305,19 @@
                         android:src="@drawable/ic_airplane_flight" />
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="1.5dp"
+                        android:layout_height="@dimen/dimens_1_5_dp"
                         android:layout_below="@id/imFlight"
                         android:layout_centerInParent="true"
                         android:layout_marginStart="@dimen/dimens_60_dp"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="@dimen/dimens_5_dp"
                         android:background="@color/colorRoseBud" />
                     <View
-                        android:layout_width="1dp"
+                        android:layout_width="@dimen/dimens_1_dp"
                         android:layout_height="match_parent"
                         android:layout_marginTop="@dimen/dimens_10_dp"
                         android:layout_alignParentEnd="true"
-                        android:layout_marginEnd="3dp"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="@dimen/dimens_3_dp"
+                        android:layout_marginBottom="@dimen/dimens_10_dp"
                         android:background="@color/colorBlue" />
                 </RelativeLayout>
 
@@ -326,7 +326,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:layout_marginStart="9dp"
+                    android:layout_marginStart="@dimen/dimens_9_dp"
                     android:orientation="vertical"
                     android:weightSum="4">
 
@@ -335,9 +335,9 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:text="@string/label_from"
-                        android:paddingTop="2dp"
+                        android:paddingTop="@dimen/dimens_2_dp"
                         android:textColor="@color/colorLinkWater"
-                        android:textSize="15sp" />
+                        android:textSize="@dimen/dimens_15_sp" />
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="match_parent"
@@ -353,7 +353,7 @@
                         android:layout_weight=".9"
                         android:text="@string/label_passenger_no"
                         android:textColor="@color/colorLinkWater"
-                        android:textSize="12sp" />
+                        android:textSize="@dimen/dimens_12_sp" />
 
                     <androidx.appcompat.widget.LinearLayoutCompat
                         android:layout_width="match_parent"
@@ -365,7 +365,7 @@
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="@dimen/dimens_10_dp"
                             android:layout_height="@dimen/dimens_15_dp"
-                            android:paddingTop="3dp"
+                            android:paddingTop="@dimen/dimens_3_dp"
                             android:src="@drawable/ic_check_mark" />
 
                         <androidx.appcompat.widget.AppCompatTextView
@@ -374,7 +374,7 @@
                             android:layout_weight="1.7"
                             android:text="@string/label_average_price"
                             android:textColor="@color/colorRoseBud"
-                            android:textSize="13sp" />
+                            android:textSize="@dimen/dimens_13_sp" />
                     </androidx.appcompat.widget.LinearLayoutCompat>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
@@ -402,8 +402,8 @@
                             android:layout_width="@dimen/dimens_20_dp"
                             android:layout_height="@dimen/dimens_20_dp"
                             android:layout_alignParentEnd="true"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="@dimen/dimens_5_dp"
+                            android:layout_marginEnd="@dimen/dimens_5_dp"
                             android:src="@drawable/ic_expand" />
                     </RelativeLayout>
 
@@ -421,7 +421,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/label_12"
                             android:textColor="@color/colorBlack"
-                            android:textSize="14sp" />
+                            android:textSize="@dimen/dimens_14_sp" />
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/tvHrs1"
@@ -431,7 +431,7 @@
                             android:text="@string/label_hrs"
                             android:layout_alignBottom="@+id/tv12hrs"
                             android:textColor="@color/colorLinkWater"
-                            android:textSize="14sp" />
+                            android:textSize="@dimen/dimens_14_sp" />
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/tv8"
@@ -442,7 +442,7 @@
                             android:layout_marginStart="5dp"
                             android:text="@string/label_45"
                             android:textColor="@color/colorBlack"
-                            android:textSize="14sp" />
+                            android:textSize="@dimen/dimens_14_sp" />
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/tvMin1"
@@ -452,7 +452,7 @@
                             android:text="@string/label_minutes"
                             android:layout_alignBottom="@+id/tv8"
                             android:textColor="@color/colorLinkWater"
-                            android:textSize="14sp" />
+                            android:textSize="@dimen/dimens_14_sp" />
 
 
                     </RelativeLayout>
@@ -469,10 +469,10 @@
             android:layout_centerInParent="true"
             android:layout_marginStart="@dimen/dimens_20_dp"
             android:layout_marginEnd="@dimen/dimens_20_dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginTop="@dimen/dimens_1_dp"
+            android:layout_marginBottom="@dimen/dimens_4_dp"
             app:cardBackgroundColor="@color/colorWhite"
-            app:cardElevation="5dp">
+            app:cardElevation="@dimen/dimens_5_dp">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
@@ -498,7 +498,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/label_EK204"
                         android:textColor="@color/colorBlack"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/dimens_14_sp" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -514,15 +514,15 @@
                         android:layout_height="wrap_content"
                         android:text="@string/label_DXB_SFD"
                         android:textColor="@color/colorBlack"
-                        android:textSize="18sp" />
+                        android:textSize="@dimen/dimens_18_sp" />
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/label_A380_800"
-                        android:paddingTop="2dp"
+                        android:paddingTop="@dimen/dimens_2_dp"
                         android:textColor="@color/colorLinkWater"
-                        android:textSize="13sp" />
+                        android:textSize="@dimen/dimens_13_sp" />
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -547,7 +547,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/label_duration"
                         android:layout_gravity="end"
-                        android:layout_marginTop="3dp"
+                        android:layout_marginTop="@dimen/dimens_3_dp"
                         android:layout_marginEnd="@dimen/dimens_10_dp"
                         android:textColor="@color/colorLinkWater" />
 
@@ -575,15 +575,15 @@
             android:layout_weight="1"
             android:layout_marginStart="@dimen/dimens_20_dp"
             android:layout_marginEnd="@dimen/dimens_20_dp"
-            android:layout_marginTop="8dp"
-            app:cardElevation="5dp">
+            android:layout_marginTop="@dimen/dimens_8_dp"
+            app:cardElevation="@dimen/dimens_5_dp">
 
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent">
                 <View
-                    android:layout_width="3dp"
+                    android:layout_width="@dimen/dimens_3_dp"
                     android:layout_height="match_parent"
                     android:background="@color/colorMediumPurple" />
 
@@ -592,7 +592,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dimens_25_dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dimens_8_dp"
                     android:textColor="@color/colorBlack"
                     android:textSize="@dimen/dimens_16_sp"
                     android:text="@string/label_economy_class"/>
@@ -617,7 +617,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_centerInParent="true"
-                    android:layout_marginEnd="15dp"
+                    android:layout_marginEnd="@dimen/dimens_15_dp"
                     android:text="@string/label_average_cost"
                     android:textColor="@color/colorCharcoal"
                     android:textStyle="bold" />
@@ -632,15 +632,15 @@
             android:layout_weight="1"
             android:layout_marginStart="@dimen/dimens_20_dp"
             android:layout_marginEnd="@dimen/dimens_20_dp"
-            android:layout_marginTop="8dp"
-            app:cardElevation="5dp">
+            android:layout_marginTop="@dimen/dimens_8_dp"
+            app:cardElevation="@dimen/dimens_5_dp">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent">
 
                 <View
-                    android:layout_width="3dp"
+                    android:layout_width="@dimen/dimens_3_dp"
                     android:layout_height="match_parent"
                     android:background="@color/colorShocking" />
 
@@ -649,7 +649,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dimens_25_dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dimens_8_dp"
                     android:text="@string/label_first_class"
                     android:textColor="@color/colorBlack"
                     android:textSize="@dimen/dimens_16_sp" />
@@ -689,15 +689,15 @@
             android:layout_weight="1"
             android:layout_marginStart="@dimen/dimens_20_dp"
             android:layout_marginEnd="@dimen/dimens_20_dp"
-            android:layout_marginTop="8dp"
-            app:cardElevation="5dp">
+            android:layout_marginTop="@dimen/dimens_8_dp"
+            app:cardElevation="@dimen/dimens_5_dp">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <View
-                    android:layout_width="3dp"
+                    android:layout_width="@dimen/dimens_3_dp"
                     android:layout_height="match_parent"
                     android:background="@color/colorMediumPurple" />
 
@@ -706,7 +706,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dimens_25_dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dimens_8_dp"
                     android:text="@string/label_business_class"
                     android:textColor="@color/colorBlack"
                     android:textSize="@dimen/dimens_16_sp" />
